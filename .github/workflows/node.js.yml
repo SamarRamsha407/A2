@@ -25,8 +25,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+      working-directory: app
     - run: npm run build --if-present
+      working-directory: app
     - run: npm test
+      working-directory: app
     - name: Deploy
       working-directory: app
       run: |
