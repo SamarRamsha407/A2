@@ -28,6 +28,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - name: Deploy
+      working-directory: A2
       run: |
         git config --global user.name "SamarRamsha407"
         git config --global user.email "u2017407@giki.edu.pk"
